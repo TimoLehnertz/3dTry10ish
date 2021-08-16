@@ -43,7 +43,6 @@ public class Canvas3D extends Canvas implements Runnable, ComponentListener {
 	public synchronized void start() {
 		controlls = new Controlls(this);
 		
-		
 		running = true;
 		thread = new Thread(this, "Display");
 		thread.start();
