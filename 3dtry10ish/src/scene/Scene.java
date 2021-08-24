@@ -28,7 +28,7 @@ public class Scene {
 		
 		this.objects = new ArrayList<>();
 		this.activeCamera = new Camera();
-		this.backgroundColor = new Color(5, 10, 14);
+		this.backgroundColor = new Color(15, 15, 20);
 	}
 	
 	public void animate() {
