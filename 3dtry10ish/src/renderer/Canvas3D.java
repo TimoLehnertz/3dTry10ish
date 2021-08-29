@@ -29,9 +29,9 @@ public class Canvas3D extends Canvas implements Runnable, ComponentListener {
 	public Canvas3D(boolean useDefaultScene) {
 		super();
 		addComponentListener(this);
-		Scene startScene = new Scene();
-		startScene.initStartup();
-		if(useDefaultScene) {			
+		if(useDefaultScene) {
+			Scene startScene = new Scene();
+			startScene.initStartup();
 			addScene(startScene);
 			loadScene(0);
 		} else {
@@ -177,6 +177,10 @@ public class Canvas3D extends Canvas implements Runnable, ComponentListener {
 		}
 		activeScene = scenes.get(index);
 		return true;
+	}
+	
+	public Scene getActiveScene() {
+		return activeScene;
 	}
 
 	public List<Scene> getScenes() {

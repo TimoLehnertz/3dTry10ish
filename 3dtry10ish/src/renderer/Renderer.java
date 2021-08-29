@@ -36,7 +36,7 @@ public class Renderer {
 		 */
 		faces.sort(new Comparator<Face>() {
 			public int compare(Face a, Face b) {
-				return b.getAverageDistance() - a.getAverageDistance() < 0 ? -1 : 1;
+				return b.getAverageDistance() - a.getAverageDistance() < 0 ? -1 : b.getAverageDistance() - a.getAverageDistance() > 0 ? 1 : faces.indexOf(a) > faces.indexOf(b) ? 1 : -1;
 			}
 		});
 		/**

@@ -77,8 +77,8 @@ public class Scene {
 			animate();
 		}
 		List<Face> faces = new ArrayList<>();
-		for (MyObject object : objects) {
-			for (Face face : object.getFaces()) {
+		for (int i = 0; i < objects.size(); i++) {
+			for (Face face : objects.get(i).getFaces()) {
 				faces.add(activeCamera.toSpace(face));
 			}
 		}
@@ -97,6 +97,7 @@ public class Scene {
 		if(object instanceof LightSource) {
 			lightSources.add((LightSource) object);
 		}
+		System.out.println(objects.size());
 		return objects.add(object);
 	}
 	
