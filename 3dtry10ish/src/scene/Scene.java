@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import maths.Vec3;
+import objects.Arrow;
 import objects.Camera;
+import objects.CenterArrows;
 import objects.Cube;
 import objects.Drone;
 import objects.LightSource;
@@ -57,8 +59,18 @@ public class Scene {
 				defaultCube.addChild(c);
 			}
 		}
+		for (int x = -5; x < 10; x++) {
+			Cube c = new Cube(x, 0, 0, 0.02);
+			defaultCube.addChild(c);
+		}
 		Drone drone = new Drone();
 		addObject(drone);
+		
+		/**
+		 * arrows
+		 */
+		CenterArrows arrow = new CenterArrows(0.2);
+		defaultCube.addChild(arrow);
 		
 		PointLight p = new PointLight(0, 0, 10);
 		p.setColor(new Color(100, 100, 255));

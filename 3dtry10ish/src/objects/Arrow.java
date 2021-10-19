@@ -14,6 +14,7 @@ public class Arrow extends MyObject{
 
 	public Arrow(double x, double y, double z, double scale, Color color) {
 		super(x, y, z);
+		scale /= 5;
 		Cube base = new Cube(2.5,0,0,1);
 		base.setColor(color);
 		base.setScale(5, 0.2, 0.2);
@@ -30,7 +31,7 @@ public class Arrow extends MyObject{
 		right.setScale(5, .7, .5);
 		right.getRot().z = Math.PI / 4;
 		addChild(right);
-		
+		setScale(scale);
 		setUseWireFrame(false);
 	}
 }

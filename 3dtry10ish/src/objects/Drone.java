@@ -16,6 +16,7 @@ public class Drone extends MyObject {
 
 	public Drone(double x, double y, double z, int arms) {
 		super(x, y, z);
+		setScale(0.05);
 		/**
 		 * base
 		 */
